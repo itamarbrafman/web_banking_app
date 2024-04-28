@@ -52,16 +52,16 @@ function DashboardPage() {
     const receiverEmail = formData.get('email');
     const amount = parseFloat(formData.get('amount'));  
   
-      const newTransaction = await makeTransaction(token, receiverEmail, amount);
-      if (newTransaction.error) {
-        alert('Transaction failed. ' + newTransaction.error);
-        return;
-      }
+    const newTransaction = await makeTransaction(token, receiverEmail, amount);
+    if (newTransaction.error) {
+      alert('Transaction failed. ' + newTransaction.error);
+      return;
+    }
 
-      alert('Transaction successful');
-      setCurrTransactions(prevTransactions => [...prevTransactions, newTransaction]);
+    alert('Transaction successful');
+    setCurrTransactions(prevTransactions => [...prevTransactions, newTransaction]);
 
-      setCurrBalance(prevBalance => prevBalance - amount);
+    setCurrBalance(prevBalance => prevBalance - amount);
   
     setShowTransactionForm(false);
   };
