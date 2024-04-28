@@ -51,16 +51,18 @@ function DashboardPage() {
     const formData = new FormData(event.target);
     const receiverEmail = formData.get('email');
     const amount = parseFloat(formData.get('amount'));  
-    try {
+  
       const newTransaction = await makeTransaction(token, receiverEmail, amount);
+      if (newTransaction.error) {
+        alert('Transaction failed. ' + newTransaction.error);
+        return;
+      }
+
       alert('Transaction successful');
       setCurrTransactions(prevTransactions => [...prevTransactions, newTransaction]);
 
       setCurrBalance(prevBalance => prevBalance - amount);
-    } catch (error) {
-      console.error('Error making transaction:', error);
-      alert('Transaction failed.');
-    }
+  
     setShowTransactionForm(false);
   };
   
@@ -100,7 +102,7 @@ function DashboardPage() {
     className="date-text" 
     style={{ position: 'relative', top: '-10rem', left: '25rem' }}
   >
-    <span style={{ color: 'black' }}>Recent Transaction From:</span> 
+    <span style={{ color: 'black' }}>Recent Transaction From: </span> 
     <span style={{ color: 'red' }}>Today</span>
   </h1>      
   <MySVGComponent />

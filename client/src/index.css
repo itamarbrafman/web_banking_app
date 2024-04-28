@@ -17,7 +17,7 @@
 
 .mybank-text {
   color: var(--Primary-Blue, #003049);
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 2.36225rem;
   font-style: normal;
   font-weight: 600;
@@ -56,7 +56,7 @@ body::before {
 #AcessFormText {
   color: #0360F0;
   text-align: center;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 2.1875rem;
   font-style: normal;
   font-weight: 600;
@@ -69,7 +69,7 @@ body::before {
 
 .signUpText {
   color: #0360F0;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 1.0625rem;
   font-style: normal;
   font-weight: 400;
@@ -126,7 +126,7 @@ body::before {
   color: #8F9CA3;
   leading-trim: both;
   text-edge: cap;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -155,7 +155,7 @@ body::before {
 .blue-rec-text {
   color: #FFF;
   text-align: center;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
@@ -189,7 +189,7 @@ body::before {
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 1.625rem;
   font-style: normal;
   font-weight: 500;
@@ -202,7 +202,7 @@ body::before {
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -226,7 +226,7 @@ body::before {
 
 .acount-text {
   color: var(--Primary-Blue, #003049);
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -265,7 +265,7 @@ body::before {
   color: #939393;
   leading-trim: both;
   text-edge: cap;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 500;
@@ -309,7 +309,7 @@ body::before {
 
 #logout-text {
   color: var(--Primary-Blue, #003049);
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;

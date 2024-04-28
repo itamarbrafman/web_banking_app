@@ -44,7 +44,6 @@ const checkCode = async (req, res) => {
         // const verification_check = await client.verify.v2.services(verifySid).verificationChecks.create({to: phoneNumber, code});
         // console.log('Verification check status:', verification_check.status);
         const verification_check = {status: "approved"}; //for testing, delete later
-        let accountInfo;
         let authToken;
         if (verification_check.status === "approved") {
             authToken = createJSONToken(email, password);

@@ -7,11 +7,18 @@ function SignUpTab() {
         event.preventDefault(); 
         const formData = new FormData(event.target);
         const submittedData = Object.fromEntries(formData.entries());
-        const phoneNumber = submittedData.phoneNumber.trim(); 
+        const phoneNumber = submittedData.phoneNumber; 
+        const email = submittedData.email; 
         const phoneRegex = /^\+972\d{9}$/;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
         if (!phoneRegex.test(phoneNumber)) {
             alert('Please enter a valid phone number starting with +972.');
+            return;
+        }
+
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
             return;
         }
         

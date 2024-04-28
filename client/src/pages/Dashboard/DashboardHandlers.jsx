@@ -35,12 +35,6 @@ export async function makeTransaction(token, receiverEmail, amount) {
       body: JSON.stringify({ receiverEmail, amount })
     });
 
-    if (!response.ok) {
-      const data = await response.json(); 
-      console.error('Transaction failed:', data.error);
-      throw new Error('Transaction failed');
-    }
-
     const data = await response.json(); 
     return data;
   } catch (error) {
